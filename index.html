@@ -59,7 +59,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-button">Заказать услугу</button>
+          <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <section class="characteristic-section section">
@@ -130,22 +130,28 @@
               </div>
             </li>
             <li class="activity-item">
-              <img
-                src="./images/img-2.jpg"
-                class="photo"
-                width="370"
-                height="294"
-                alt="Мужик смотрит в выключенный телефон"
-              />
+              <div class="activity-overlay">
+                <img
+                  src="./images/img-2.jpg"
+                  class="photo"
+                  width="370"
+                  height="294"
+                  alt="Мужик смотрит в выключенный телефон"
+                />
+                <p class="activity-text">Мобильные приложения</p>
+              </div>
             </li>
             <li class="activity-item">
-              <img
-                src="./images/img-3.jpg"
-                class="photo"
-                width="370"
-                height="294"
-                alt="Карта градиента"
-              />
+              <div class="activity-overlay">
+                <img
+                  src="./images/img-3.jpg"
+                  class="photo"
+                  width="370"
+                  height="294"
+                  alt="Карта градиента"
+                />
+                <p class="activity-text">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -442,5 +448,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-modal-button" data-modal-close>
+          <svg class="close-modal-icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
