@@ -304,6 +304,7 @@ h3 {
   position: absolute;
   left: 50%;
   bottom: 27px;
+  width: 100%;
   transform: translatex(-50%);
 
   font-style: normal;
@@ -655,32 +656,36 @@ h3 {
 }
 
 .project-link:hover .project-overlay::before {
-  opacity: 1;
+  bottom: 0;
 }
 
 .project-overlay::before {
   display: inline-block;
   position: absolute;
+  bottom: -295px;
   content: '';
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
+
+  transition: bottom var(--transition-duration) var(--transition-timing-function);
 }
 
 .project-overlay {
   position: relative;
+
+  overflow: hidden;
 }
 
 .project-overlay-text {
   position: absolute;
-  top: 50%;
+  top: 440px;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 168px;
   width: 322px;
-  transition: transform var(--transition-duration) var(--transition-timing-function);
-  opacity: 0;
+
+  transition: top var(--transition-duration) var(--transition-timing-function);
 
   font-style: normal;
   font-weight: 400;
@@ -691,7 +696,9 @@ h3 {
 }
 
 .project-link:hover .project-overlay-text {
-  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .project-link {
